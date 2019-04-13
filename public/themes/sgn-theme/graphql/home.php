@@ -15,6 +15,23 @@ $homeType = new ObjectType([
                 'title' => Type::string(),
             ],
         ]),
+        'card1' => new ObjectType([
+            'name' => 'Card 1',
+            'fields' => [
+                'image' => $imageType,
+                'title' => Type::string(),
+                'text' => Type::string(),
+            ],
+        ]),
+        'quote' => Type::string(),
+        'card2' => new ObjectType([
+            'name' => 'Card 2',
+            'fields' => [
+                'image' => $imageType,
+                'title' => Type::string(),
+                'text' => Type::string(),
+            ],
+        ]),
     ],
 ]);
 

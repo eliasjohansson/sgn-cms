@@ -35,11 +35,6 @@ add_action('after_setup_theme', function () {
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
     wp_deregister_script('jquery');
-
-    // wp_enqueue_style('wordplate', mix('styles/app.css'));
-
-    // wp_register_script('wordplate', mix('scripts/app.js'), '', '', true);
-    // wp_enqueue_script('wordplate');
 });
 
 // Remove JPEG compression.
@@ -52,11 +47,68 @@ add_filter('pll_filter_query_excluded_query_vars', function ($excludes) {
     return $excludes;
 }, 3, 10);
 
-// GRAPHQL
+// Hide default "Post" type
+add_action('admin_menu', 'remove_default_post_type');
 
-// Pages
+function remove_default_post_type()
+{
+    remove_menu_page('edit.php');
+}
+
+add_action('admin_bar_menu', 'remove_default_post_type_menu_bar', 999);
+
+function remove_default_post_type_menu_bar($wp_admin_bar)
+{
+    $wp_admin_bar->remove_node('new-post');
+}
+
+add_action('wp_dashboard_setup', 'remove_draft_widget', 999);
+
+function remove_draft_widget()
+{
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+}
+
+// Custom Post-types
+add_action('init', function () {
+
+    register_extended_post_type('branch', [
+        "menu_icon" => "dashicons-networking",
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'Branch',
+        'graphql_plural_name' => 'Branches',
+    ], [
+        "singular" => "Branch",
+        "plural" => "Branches",
+    ]);
+
+    register_extended_post_type('collaboration', [
+        "menu_icon" => "dashicons-groups",
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'Collaboration',
+        'graphql_plural_name' => 'Collaborations',
+    ], [
+        "singular" => "Collaboration",
+        "plural" => "Collaborations",
+    ]);
+
+    register_extended_post_type('news', [
+        "menu_icon" => "dashicons-admin-site",
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'NewsPost',
+        'graphql_plural_name' => 'News',
+    ], [
+        "singular" => "News Post",
+        "plural" => "News",
+    ]);
+
+});
+
+// GRAPHQL
+// Page Schemas
 require template_path('graphql/home.php');
 
+// Where clauses
 add_filter('graphql_input_fields', function ($fields) {
     $fields['lang'] = [
         'type' => \WPGraphQL\Types::string(),
