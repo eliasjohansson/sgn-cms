@@ -136,8 +136,16 @@ function add_cpt_to_pll($post_types, $is_settings)
 };
 
 // GRAPHQL
+// Component Schemas
+require template_path('graphql/cta.php');
+require template_path('graphql/image.php');
+require template_path('graphql/header.php');
+
 // Page Schemas
 require template_path('graphql/home.php');
+require template_path('graphql/branches.php');
+
+// CPT Schemas
 require template_path('graphql/branch.php');
 
 // Where clauses

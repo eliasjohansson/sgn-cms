@@ -3,18 +3,10 @@
 use GraphQL\Type\Definition\ObjectType;
 use GraphQL\Type\Definition\Type;
 
-require template_path('graphql/image.php');
-
 $home = new ObjectType([
-    'name' => 'Home',
+    'name' => 'HomeFields',
     'fields' => [
-        'header' => new ObjectType([
-            'name' => 'Header',
-            'fields' => [
-                'image' => $image,
-                'title' => Type::string(),
-            ],
-        ]),
+        'header' => $header,
         'card1' => new ObjectType([
             'name' => 'Card 1',
             'fields' => [

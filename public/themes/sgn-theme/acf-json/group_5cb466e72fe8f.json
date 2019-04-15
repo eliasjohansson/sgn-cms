@@ -30,7 +30,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -87,7 +87,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "page-templates\/page-branches.php"
             }
         ]
     ],
@@ -96,8 +96,22 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1555326945
+    "modified": 1555331485
 }

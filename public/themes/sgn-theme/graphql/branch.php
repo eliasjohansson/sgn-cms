@@ -27,6 +27,9 @@ add_action('graphql_register_types', function ($fields) use ($branch) {
         'type' => $branch,
         'resolve' => function ($post) {
             $branchFields = get_fields($post->ID);
+            if (!$branchFields['activities']) {
+                $branchFields['activities'] = [];
+            }
             return $branchFields;
         },
     ]);
