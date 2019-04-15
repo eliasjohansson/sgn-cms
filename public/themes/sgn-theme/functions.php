@@ -138,6 +138,7 @@ function add_cpt_to_pll($post_types, $is_settings)
 // GRAPHQL
 // Page Schemas
 require template_path('graphql/home.php');
+require template_path('graphql/branch.php');
 
 // Where clauses
 add_filter('graphql_input_fields', function ($fields) {

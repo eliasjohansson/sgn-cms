@@ -5,20 +5,20 @@ use GraphQL\Type\Definition\Type;
 
 require template_path('graphql/image.php');
 
-$homeType = new ObjectType([
-    'name' => 'Homepage',
+$home = new ObjectType([
+    'name' => 'Home',
     'fields' => [
-        'hero' => new ObjectType([
-            'name' => 'Hero',
+        'header' => new ObjectType([
+            'name' => 'Header',
             'fields' => [
-                'image' => $imageType,
+                'image' => $image,
                 'title' => Type::string(),
             ],
         ]),
         'card1' => new ObjectType([
             'name' => 'Card 1',
             'fields' => [
-                'image' => $imageType,
+                'image' => $image,
                 'title' => Type::string(),
                 'text' => Type::string(),
             ],
@@ -27,7 +27,7 @@ $homeType = new ObjectType([
         'card2' => new ObjectType([
             'name' => 'Card 2',
             'fields' => [
-                'image' => $imageType,
+                'image' => $image,
                 'title' => Type::string(),
                 'text' => Type::string(),
             ],
@@ -35,14 +35,12 @@ $homeType = new ObjectType([
     ],
 ]);
 
-add_action('graphql_page_fields', function ($fields) use ($homeType) {
-    $fields['acf'] = [
-        'type' => $homeType,
+add_action('graphql_register_types', function ($fields) use ($home) {
+    register_graphql_field('Page', 'home', [
+        'type' => $home,
         'resolve' => function ($post) {
             $homeFields = get_fields($post->ID);
             return $homeFields;
         },
-    ];
-
-    return $fields;
+    ]);
 });

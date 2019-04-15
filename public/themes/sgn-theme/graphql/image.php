@@ -2,7 +2,7 @@
 use GraphQL\Type\Definition\ObjectType;
 use GraphQL\Type\Definition\Type;
 
-$imageType = new ObjectType([
+$image = new ObjectType([
     'name' => 'Image',
     'fields' => [
         'id' => Type::int(),

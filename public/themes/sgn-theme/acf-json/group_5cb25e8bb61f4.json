@@ -1,7 +1,26 @@
 {
     "key": "group_5cb25e8bb61f4",
-    "title": "Branches",
+    "title": "Branch",
     "fields": [
+        {
+            "key": "field_5cb4739e18f03",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
         {
             "key": "field_5cb4636ac124b",
             "label": "Activities",
@@ -89,7 +108,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -135,5 +154,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555326001
+    "modified": 1555329963
 }
