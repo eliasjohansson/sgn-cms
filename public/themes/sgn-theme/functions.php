@@ -82,6 +82,16 @@ add_action('init', function () {
         "plural" => "Branches",
     ]);
 
+    register_extended_post_type('event', [
+        "menu_icon" => "dashicons-calendar-alt",
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'Event',
+        'graphql_plural_name' => 'Events',
+    ], [
+        "singular" => "Event",
+        "plural" => "Events",
+    ]);
+
     register_extended_post_type('collaboration', [
         "menu_icon" => "dashicons-groups",
         'show_in_graphql' => true,
@@ -103,6 +113,27 @@ add_action('init', function () {
     ]);
 
 });
+
+// Translation for all custom post-types
+add_filter('pll_get_post_types', 'add_cpt_to_pll', 10, 2);
+
+function add_cpt_to_pll($post_types, $is_settings)
+{
+    if ($is_settings) {
+        // hides 'my_cpt' from the list of custom post types in Polylang settings
+        unset($post_types['branch']);
+        unset($post_types['event']);
+        unset($post_types['collaboration']);
+        unset($post_types['news']);
+    } else {
+        // enables language and translation management for 'my_cpt'
+        $post_types['branch'] = 'branch';
+        $post_types['event'] = 'event';
+        $post_types['collaboration'] = 'collaboration';
+        $post_types['news'] = 'news';
+    }
+    return $post_types;
+};
 
 // GRAPHQL
 // Page Schemas
