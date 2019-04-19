@@ -143,6 +143,7 @@ require template_path('graphql/header.php');
 
 // Page Schemas
 require template_path('graphql/home.php');
+require template_path('graphql/newspage.php');
 require template_path('graphql/branches.php');
 
 // CPT Schemas
