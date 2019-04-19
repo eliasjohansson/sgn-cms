@@ -1,11 +1,14 @@
 <?php
 
 use GraphQL\Type\Definition\ObjectType;
+use GraphQL\Type\Definition\Type;
 
 $branches = new ObjectType([
     'name' => 'BranchesFields',
     'fields' => [
         'header' => $header,
+        'activities_title' => Type::string(),
+        'events_title' => Type::string(),
     ],
 ]);
 

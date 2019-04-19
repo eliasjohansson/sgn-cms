@@ -15,9 +15,20 @@ $activity = new ObjectType([
     ],
 ]);
 
+/* $event = new ObjectType([
+'name' => 'Event',
+'fields' => [
+'title' => Type::string(),
+'date' => Type::string(),
+'facebook_event' => Type::string(),
+'image' => Type::string(),
+],
+]); */
+
 $branch = new ObjectType([
     'name' => 'BranchFields',
     'fields' => [
+        'description' => Type::string(),
         'activities' => Type::listOf($activity),
     ],
 ]);
@@ -30,6 +41,7 @@ add_action('graphql_register_types', function ($fields) use ($branch) {
             if (!$branchFields['activities']) {
                 $branchFields['activities'] = [];
             }
+
             return $branchFields;
         },
     ]);

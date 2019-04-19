@@ -80,6 +80,44 @@
                     "new_lines": ""
                 }
             ]
+        },
+        {
+            "key": "field_5cb9e9f47766f",
+            "label": "Activities Title",
+            "name": "activities_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cb9e9fd77670",
+            "label": "Events Title",
+            "name": "events_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -113,5 +151,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555331485
+    "modified": 1555687948
 }

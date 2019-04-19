@@ -22,11 +22,11 @@
             "new_lines": ""
         },
         {
-            "key": "field_5cb4636ac124b",
+            "key": "field_5cb9e45c28930",
             "label": "Activities",
             "name": "activities",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "List of activities",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -34,14 +34,14 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5cb46377c124c",
+            "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "block",
+            "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5cb46377c124c",
+                    "key": "field_5cb9e47328931",
                     "label": "Title",
                     "name": "title",
                     "type": "text",
@@ -60,12 +60,12 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5cb46382c124d",
+                    "key": "field_5cb9e47b28932",
                     "label": "Description",
                     "name": "description",
                     "type": "textarea",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -79,8 +79,8 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_5cb4638fc124e",
-                    "label": "Date & Time",
+                    "key": "field_5cb9e48728933",
+                    "label": "Date and Time",
                     "name": "date_time",
                     "type": "date_time_picker",
                     "instructions": "",
@@ -92,16 +92,16 @@
                         "id": ""
                     },
                     "display_format": "Y-m-d H:i:s",
-                    "return_format": "d\/m\/Y g:i a",
+                    "return_format": "Y-m-d H:i:s",
                     "first_day": 1
                 },
                 {
-                    "key": "field_5cb463e0c124f",
+                    "key": "field_5cb9e4b628934",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -154,5 +154,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555329963
+    "modified": 1555687915
 }
