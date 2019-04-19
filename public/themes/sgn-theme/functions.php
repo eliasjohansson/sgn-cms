@@ -1,6 +1,8 @@
 <?php
-
 declare (strict_types = 1);
+
+use GraphQL\Type\Definition\ObjectType;
+use GraphQL\Type\Definition\Type;
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
@@ -134,6 +136,27 @@ function add_cpt_to_pll($post_types, $is_settings)
     }
     return $post_types;
 };
+
+$langType = new ObjectType([
+    'name' => 'Lang',
+    'fields' => [
+        'name' => Type::string(),
+        'slug' => Type::string(),
+        'locale' => Type::string(),
+    ],
+]);
+
+register_graphql_field(
+    'RootQuery',
+    'languages',
+    [
+        'type' => Type::listOf($langType), // Type::listOf(Type::string()),
+        'resolve' => function () {
+            $langs = pll_the_languages(array('raw' => 1));
+            return $langs;
+        },
+    ]
+);
 
 // GRAPHQL
 // Component Schemas
