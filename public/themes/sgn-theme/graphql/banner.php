@@ -3,12 +3,11 @@
 use GraphQL\Type\Definition\ObjectType;
 use GraphQL\Type\Definition\Type;
 
-$header = new ObjectType([
-    'name' => 'Header',
+$banner = new ObjectType([
+    'name' => 'Banner',
     'fields' => [
         'title' => Type::string(),
         'text' => Type::string(),
-        'image' => Type::string(),
         'button' => $button,
     ],
 ]);

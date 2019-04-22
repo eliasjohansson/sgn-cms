@@ -160,16 +160,18 @@ register_graphql_field(
 
 // GRAPHQL
 // Component Schemas
-require template_path('graphql/cta.php');
+require template_path('graphql/button.php');
 require template_path('graphql/image.php');
 require template_path('graphql/header.php');
+require template_path('graphql/banner.php');
 
 // Page Schemas
 require template_path('graphql/home.php');
 require template_path('graphql/branches.php');
+require template_path('graphql/collaborations.php');
 
 // CPT Schemas
-require template_path('graphql/branch.php');
+require template_path('graphql/cpt-branch.php');
 
 // Where clauses
 add_filter('graphql_input_fields', function ($fields) {

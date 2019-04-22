@@ -12,14 +12,6 @@ $card = new ObjectType([
     ],
 ]);
 
-$banner = new ObjectType([
-    'name' => 'Banner',
-    'fields' => [
-        'title' => Type::string(),
-        'text' => Type::string(),
-    ],
-]);
-
 $visionsSection = new ObjectType([
     'name' => 'VisionsSection',
     'fields' => [
