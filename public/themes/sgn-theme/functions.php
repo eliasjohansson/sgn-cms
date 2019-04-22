@@ -167,6 +167,7 @@ require template_path('graphql/banner.php');
 
 // Page Schemas
 require template_path('graphql/home.php');
+require template_path('graphql/newspage.php');
 require template_path('graphql/branches.php');
 require template_path('graphql/collaborations.php');
 

@@ -1,9 +1,9 @@
 {
-    "key": "group_5cb25eb980193",
-    "title": "NewsPage",
+    "key": "group_5cb8d101b2e8b",
+    "title": "Membership",
     "fields": [
         {
-            "key": "field_5cb8924149b1f",
+            "key": "field_5cb8d101bb55e",
             "label": "Header",
             "name": "header",
             "type": "group",
@@ -18,7 +18,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5cb8928b49b20",
+                    "key": "field_5cb8d101bc9a3",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -42,7 +42,7 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5cb892fb41f16",
+                    "key": "field_5cb8d101bc9ab",
                     "label": "title",
                     "name": "title",
                     "type": "text",
@@ -61,7 +61,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5cb8932141f17",
+                    "key": "field_5cb8d101bc9b3",
                     "label": "Text",
                     "name": "text",
                     "type": "text",
@@ -114,5 +114,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555615993
+    "modified": 1555616013
 }
