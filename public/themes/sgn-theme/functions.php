@@ -146,14 +146,41 @@ $langType = new ObjectType([
     ],
 ]);
 
+// Create query to get all languages
 register_graphql_field(
     'RootQuery',
     'languages',
     [
-        'type' => Type::listOf($langType), // Type::listOf(Type::string()),
+        'type' => Type::listOf($langType),
         'resolve' => function () {
             $langs = pll_the_languages(array('raw' => 1));
             return $langs;
+        },
+    ]
+);
+
+// Language field for pages
+register_graphql_field(
+    'Page',
+    'language',
+    [
+        'type' => Type::string(),
+        'resolve' => function ($post) {
+            $lang = pll_get_post_language($post->ID);
+            return $lang;
+        },
+    ]
+);
+
+// List of available translations for page
+register_graphql_field(
+    'Page',
+    'availableLanguages',
+    [
+        'type' => Type::string(),
+        'resolve' => function ($post) {
+            $langs = pll_get_post_translations($post->ID);
+            return json_encode($langs);
         },
     ]
 );
