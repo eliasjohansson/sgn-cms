@@ -1,6 +1,6 @@
 {
     "key": "group_5cb25e8bb61f4",
-    "title": "Branch",
+    "title": "Branch CPT",
     "fields": [
         {
             "key": "field_5cb4739e18f03",
@@ -154,5 +154,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555687915
+    "modified": 1555964069
 }
