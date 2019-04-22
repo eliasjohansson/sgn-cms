@@ -1,6 +1,6 @@
 {
     "key": "group_5cb25eb980193",
-    "title": "NewsPage",
+    "title": "News",
     "fields": [
         {
             "key": "field_5cb8924149b1f",
@@ -114,5 +114,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555615993
+    "modified": 1555963968
 }
