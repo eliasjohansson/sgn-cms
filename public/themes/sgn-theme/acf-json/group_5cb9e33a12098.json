@@ -1,6 +1,6 @@
 {
     "key": "group_5cb9e33a12098",
-    "title": "Events CPT",
+    "title": "Event CPT",
     "fields": [
         {
             "key": "field_5cb9e348ec800",
@@ -114,5 +114,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555918270
+    "modified": 1555965346
 }
