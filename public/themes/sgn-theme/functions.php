@@ -201,6 +201,7 @@ require template_path('graphql/donate.php');
 
 // CPT Schemas
 require template_path('graphql/cpt-branch.php');
+require template_path('graphql/cpt-collaboration.php');
 
 // Where clauses
 add_filter('graphql_input_fields', function ($fields) {

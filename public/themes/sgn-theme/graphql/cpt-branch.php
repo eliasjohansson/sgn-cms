@@ -15,16 +15,6 @@ $activity = new ObjectType([
     ],
 ]);
 
-/* $event = new ObjectType([
-'name' => 'Event',
-'fields' => [
-'title' => Type::string(),
-'date' => Type::string(),
-'facebook_event' => Type::string(),
-'image' => Type::string(),
-],
-]); */
-
 $branch = new ObjectType([
     'name' => 'BranchFields',
     'fields' => [
