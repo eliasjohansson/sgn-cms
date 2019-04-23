@@ -177,10 +177,10 @@ register_graphql_field(
     'Page',
     'availableLanguages',
     [
-        'type' => Type::string(),
+        'type' => Type::listOf(Type::string()),
         'resolve' => function ($post) {
             $langs = pll_get_post_translations($post->ID);
-            return json_encode($langs);
+            return array_keys($langs);
         },
     ]
 );

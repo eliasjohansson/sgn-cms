@@ -1,6 +1,6 @@
 {
     "key": "group_5cb8d0c69336e",
-    "title": "Donations",
+    "title": "Donate",
     "fields": [
         {
             "key": "field_5cb8d0c69c18f",
@@ -330,7 +330,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/page-news.php"
+                "value": "page-templates\/page-donate.php"
             }
         ]
     ],
@@ -357,5 +357,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555965880
+    "modified": 1556017283
 }
