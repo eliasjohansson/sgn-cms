@@ -104,15 +104,15 @@ add_action('init', function () {
         "plural" => "Collaborations",
     ]);
 
-    register_extended_post_type('news', [
-        "menu_icon" => "dashicons-admin-site",
-        'show_in_graphql' => true,
-        'graphql_single_name' => 'NewsPost',
-        'graphql_plural_name' => 'News',
-    ], [
-        "singular" => "News Post",
-        "plural" => "News",
-    ]);
+    /* register_extended_post_type('news', [
+"menu_icon" => "dashicons-admin-site",
+'show_in_graphql' => true,
+'graphql_single_name' => 'NewsPost',
+'graphql_plural_name' => 'News',
+], [
+"singular" => "News Post",
+"plural" => "News",
+]); */
 
 });
 
@@ -126,13 +126,13 @@ function add_cpt_to_pll($post_types, $is_settings)
         unset($post_types['branch']);
         unset($post_types['event']);
         unset($post_types['collaboration']);
-        unset($post_types['news']);
+        /* unset($post_types['news']); */
     } else {
         // enables language and translation management for 'my_cpt'
         $post_types['branch'] = 'branch';
         $post_types['event'] = 'event';
         $post_types['collaboration'] = 'collaboration';
-        $post_types['news'] = 'news';
+        /* $post_types['news'] = 'news'; */
     }
     return $post_types;
 };
