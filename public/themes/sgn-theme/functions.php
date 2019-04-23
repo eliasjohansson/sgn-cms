@@ -197,6 +197,7 @@ require template_path('graphql/home.php');
 require template_path('graphql/branches.php');
 require template_path('graphql/collaborations.php');
 require template_path('graphql/news.php');
+require template_path('graphql/donate.php');
 
 // CPT Schemas
 require template_path('graphql/cpt-branch.php');
