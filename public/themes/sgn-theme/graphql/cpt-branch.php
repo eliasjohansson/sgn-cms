@@ -18,7 +18,26 @@ $activity = new ObjectType([
 $branch = new ObjectType([
     'name' => 'BranchFields',
     'fields' => [
-        'description' => Type::string(),
+        'contact_info' => new ObjectType([
+            'name' => 'BranchContactInfo',
+            'fields' => [
+                'address_label' => Type::string(),
+                'address' => Type::string(),
+                'email_label' => Type::string(),
+                'email' => Type::string(),
+                'phone_number_label' => Type::string(),
+                'phone_number' => Type::string(),
+                'social_media_label' => Type::string(),
+                'social_media' => new ObjectType([
+                    'name' => 'BranchSocialMedia',
+                    'fields' => [
+                        'facebook' => Type::string(),
+                        'twitter' => Type::string(),
+                        'instagram' => Type::string(),
+                    ],
+                ]),
+            ],
+        ]),
         'activities' => Type::listOf($activity),
         'events' => Type::string(),
     ],
