@@ -241,7 +241,7 @@
                         {
                             "key": "field_5cbe291a797f2",
                             "label": "LMA number",
-                            "name": "lma_",
+                            "name": "lma",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -577,5 +577,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555966723
+    "modified": 1556094154
 }

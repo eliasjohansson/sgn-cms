@@ -191,6 +191,7 @@ require template_path('graphql/button.php');
 require template_path('graphql/image.php');
 require template_path('graphql/header.php');
 require template_path('graphql/banner.php');
+require template_path('graphql/tac.php');
 
 // Page Schemas
 require template_path('graphql/home.php');
@@ -198,6 +199,7 @@ require template_path('graphql/branches.php');
 require template_path('graphql/collaborations.php');
 require template_path('graphql/news.php');
 require template_path('graphql/donate.php');
+require template_path('graphql/membership.php');
 
 // CPT Schemas
 require template_path('graphql/cpt-event.php');
