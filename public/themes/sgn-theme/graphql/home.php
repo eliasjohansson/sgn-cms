@@ -92,6 +92,16 @@ $contact = new ObjectType([
     ],
 ]);
 
+$infoCard = new ObjectType([
+    'name' => 'HomeInfoCard',
+    'fields' => [
+        'image' => Type::string(),
+        'title' => Type::string(),
+        'text' => Type::string(),
+        'link_button' => $linkButton,
+    ],
+]);
+
 $home = new ObjectType([
     'name' => 'HomeFields',
     'fields' => [
@@ -101,6 +111,13 @@ $home = new ObjectType([
         'card2' => $card,
         'green_banner_1' => $banner,
         'green_banner_2' => $banner,
+        'info_cards' => new ObjectType([
+            'name' => 'HomeInfoCards',
+            'fields' => [
+                'card_1' => $infoCard,
+                'card_2' => $infoCard,
+            ],
+        ]),
         'visions' => $visionsSection,
         'awards' => $awardsSection,
         'news_info_box' => $newsInfoBox,
