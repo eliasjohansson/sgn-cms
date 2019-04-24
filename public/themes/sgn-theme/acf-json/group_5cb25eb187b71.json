@@ -65,6 +65,32 @@
             "delay": 0
         },
         {
+            "key": "field_5cc013b2daf3f",
+            "label": "PDF Label",
+            "name": "pdf_label",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cbf88b0eb594",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5cbf88b0eb594",
             "label": "PDF",
             "name": "pdf",
@@ -82,6 +108,32 @@
             "min_size": "",
             "max_size": "",
             "mime_types": "pdf"
+        },
+        {
+            "key": "field_5cc013d6daf40",
+            "label": "Website Label",
+            "name": "website_label",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cbf88d2bf439",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5cbf88d2bf439",
@@ -205,5 +257,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556056464
+    "modified": 1556091896
 }

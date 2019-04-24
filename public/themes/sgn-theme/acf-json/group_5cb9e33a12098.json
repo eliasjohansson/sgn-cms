@@ -3,25 +3,6 @@
     "title": "Event CPT",
     "fields": [
         {
-            "key": "field_5cb9e348ec800",
-            "label": "Title",
-            "name": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5cb9e34e4e259",
             "label": "Date",
             "name": "date",
@@ -42,7 +23,7 @@
             "key": "field_5cb9e3614e25a",
             "label": "Facebook Event",
             "name": "facebook_event",
-            "type": "text",
+            "type": "url",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -52,10 +33,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "placeholder": ""
         },
         {
             "key": "field_5cb9e3844e25b",
@@ -114,5 +92,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555965346
+    "modified": 1556092854
 }

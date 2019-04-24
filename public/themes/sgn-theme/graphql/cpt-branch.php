@@ -20,6 +20,7 @@ $branch = new ObjectType([
     'fields' => [
         'description' => Type::string(),
         'activities' => Type::listOf($activity),
+        'events' => Type::string(),
     ],
 ]);
 
@@ -31,7 +32,7 @@ add_action('graphql_register_types', function ($fields) use ($branch) {
             if (!$branchFields['activities']) {
                 $branchFields['activities'] = [];
             }
-
+            $branchFields['events'] = json_encode($branchFields['events']);
             return $branchFields;
         },
     ]);
