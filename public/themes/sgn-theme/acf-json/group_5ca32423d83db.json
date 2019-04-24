@@ -80,7 +80,7 @@
                     "key": "field_5cbe225851356",
                     "label": "Button",
                     "name": "button",
-                    "type": "group",
+                    "type": "clone",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -89,47 +89,13 @@
                         "class": "",
                         "id": ""
                     },
+                    "clone": [
+                        "group_5cbed5b3ba42c"
+                    ],
+                    "display": "seamless",
                     "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cbe226351357",
-                            "label": "Label",
-                            "name": "label",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5cbe226c51358",
-                            "label": "Link",
-                            "name": "link",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
+                    "prefix_label": 0,
+                    "prefix_name": 0
                 }
             ]
         },
@@ -1464,5 +1430,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556010809
+    "modified": 1556107764
 }

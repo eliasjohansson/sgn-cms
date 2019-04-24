@@ -9,6 +9,6 @@ $header = new ObjectType([
         'title' => Type::string(),
         'text' => Type::string(),
         'image' => Type::string(),
-        'button' => $button,
+        'link_button' => $linkButton,
     ],
 ]);

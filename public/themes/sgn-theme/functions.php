@@ -207,6 +207,7 @@ register_graphql_field(
 
 // GRAPHQL
 // Component Schemas
+require template_path('graphql/link-button.php');
 require template_path('graphql/button.php');
 require template_path('graphql/image.php');
 require template_path('graphql/header.php');

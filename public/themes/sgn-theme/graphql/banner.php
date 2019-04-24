@@ -8,6 +8,6 @@ $banner = new ObjectType([
     'fields' => [
         'title' => Type::string(),
         'text' => Type::string(),
-        'button' => $button,
+        'link_button' => $linkButton,
     ],
 ]);
