@@ -49,6 +49,14 @@ add_filter('pll_filter_query_excluded_query_vars', function ($excludes) {
     return $excludes;
 }, 3, 10);
 
+// Allow .svg file type
+function cc_mime_types($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 // Hide default "Post" type
 add_action('admin_menu', 'remove_default_post_type');
 
@@ -104,6 +112,16 @@ add_action('init', function () {
         "plural" => "Collaborations",
     ]);
 
+    register_extended_post_type('general', [
+        "menu_icon" => "dashicons-translation",
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'GeneralInfoTranslation',
+        'graphql_plural_name' => 'GeneralInfoTranslations',
+    ], [
+        "singular" => "General Info & Translation",
+        "plural" => "General Info & Translations",
+    ]);
+
     /* register_extended_post_type('news', [
 "menu_icon" => "dashicons-admin-site",
 'show_in_graphql' => true,
@@ -126,12 +144,14 @@ function add_cpt_to_pll($post_types, $is_settings)
         unset($post_types['branch']);
         unset($post_types['event']);
         unset($post_types['collaboration']);
+        unset($post_types['general']);
         /* unset($post_types['news']); */
     } else {
         // enables language and translation management for 'my_cpt'
         $post_types['branch'] = 'branch';
         $post_types['event'] = 'event';
         $post_types['collaboration'] = 'collaboration';
+        $post_types['general'] = 'general';
         /* $post_types['news'] = 'news'; */
     }
     return $post_types;
@@ -205,6 +225,7 @@ require template_path('graphql/membership.php');
 require template_path('graphql/cpt-event.php');
 require template_path('graphql/cpt-branch.php');
 require template_path('graphql/cpt-collaboration.php');
+require template_path('graphql/cpt-general.php');
 
 // Where clauses
 add_filter('graphql_input_fields', function ($fields) {
